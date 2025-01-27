@@ -6,7 +6,7 @@ let level = 0;
 let h2 = document.querySelector("h2");
 document.addEventListener("keypress", function () {
   if (started == false) {
-    console.log("Game is Started");
+    
     started = true;
     levelUp();
   }
@@ -32,7 +32,7 @@ function levelUp() {
   let randombtn = document.querySelector(`.${randomColor}`);
 
   gameseq.push(randomColor);
-  console.log(gameseq);
+ 
 
   gameFlash(randombtn);
 }
@@ -55,9 +55,9 @@ function btnPress() {
   let btn = this;
   userflash(btn);
   userColor = btn.getAttribute("id");
-  // console.log(userColor)
+ 
   userseq.push(userColor);
-  console.log(userseq);
+  
   checkAns(userseq.length - 1);
 }
 
